@@ -124,6 +124,30 @@ a {
   transform: scaleX(1);
 }
 
+.site-header nav .lang-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 28px;
+  margin-top: -5px;
+  border: 1px solid rgba(136, 111, 230, 0.38);
+  border-radius: 8px;
+  color: #c8b8ff;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.site-header nav .lang-switch::after {
+  display: none;
+}
+
+.site-header nav .lang-switch:hover {
+  border-color: #8b5cf6;
+  background: rgba(118, 71, 221, 0.14);
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.03fr) minmax(480px, 0.97fr);
@@ -788,6 +812,25 @@ a {
   line-height: 1.7;
 }
 
+.project-info .project-learning {
+  margin-top: 20px;
+  padding-left: 14px;
+  border-left: 2px solid rgba(139, 92, 246, 0.58);
+  color: #898dab;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.project-learning span {
+  display: block;
+  margin-bottom: 4px;
+  color: #b8a8f4;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .project-info ul {
   display: flex;
   flex-wrap: wrap;
@@ -807,7 +850,13 @@ a {
   font-size: 0.65rem;
 }
 
-.project-info > a {
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-actions a {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -816,11 +865,15 @@ a {
   font-weight: 650;
 }
 
-.project-info > a span {
+.project-actions a:last-child {
+  color: #9fa3c1;
+}
+
+.project-actions a span {
   transition: transform 180ms ease;
 }
 
-.project-info > a:hover span {
+.project-actions a:hover span {
   transform: translate(3px, -3px);
 }
 
@@ -873,6 +926,58 @@ a {
   font-size: 0.62rem;
 }
 
+.now-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 42px;
+  padding: 36px 40px;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(71, 88, 235, 0.2), transparent 18rem),
+    linear-gradient(145deg, rgba(27, 23, 65, 0.92), rgba(8, 13, 31, 0.88));
+}
+
+.now-card > div {
+  max-width: 750px;
+}
+
+.now-card h3 {
+  margin: 14px 0 9px;
+  font-size: 1.7rem;
+  letter-spacing: -0.04em;
+}
+
+.now-card p:not(.eyebrow) {
+  margin: 0;
+  color: #9498b6;
+  line-height: 1.65;
+}
+
+.now-card > span {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 13px;
+  border: 1px solid rgba(103, 228, 128, 0.25);
+  border-radius: 99px;
+  color: #99eeaa;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.now-card > span i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 12px rgba(103, 228, 128, 0.7);
+}
+
 .contact {
   position: relative;
   overflow: hidden;
@@ -909,25 +1014,32 @@ a {
   line-height: 1.75;
 }
 
-.contact-note {
+.contact-actions {
   display: flex;
   position: relative;
   align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  margin-top: 55px;
-  padding-top: 26px;
-  border-top: 1px solid rgba(117, 112, 189, 0.25);
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 38px;
 }
 
-.contact-note > span {
-  color: #7d809f;
-  font-size: 0.8rem;
+.contact-actions .button {
+  min-height: 54px;
+  padding-inline: 22px;
 }
 
-.contact-note a {
-  color: #c8b8ff;
-  font-weight: 620;
+.contact-email {
+  display: inline-block;
+  position: relative;
+  margin-top: 24px;
+  color: #8b8fab;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  transition: color 180ms ease;
+}
+
+.contact-email:hover {
+  color: #c7b8ff;
 }
 
 .site-footer {
@@ -1057,6 +1169,12 @@ a {
   .contact {
     padding: 70px 48px;
   }
+
+  .now-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1162,9 +1280,17 @@ a {
     padding: 56px 26px;
   }
 
-  .contact-note {
+  .contact-actions {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .contact-actions .button {
+    width: 100%;
+  }
+
+  .now-card {
+    padding: 28px 24px;
   }
 
   .site-footer {

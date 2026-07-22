@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   description:
     "Portfolio Marka Maňka, studenta aplikované informatiky a juniorního webového vývojáře se zájmem o Python a AI.",
   other: { "codex-preview": "development" },
+  alternates: {
+    canonical: "/",
+    languages: { "cs-CZ": "/", "en": "/en" },
+  },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 
