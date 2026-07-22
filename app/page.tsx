@@ -175,22 +175,33 @@ export default function Home() {
             Nejvíc mě baví proměnit nápad ve funkční, přehledný web, který může někdo opravdu používat.
           </p>
         </div>
-        <div className="about-grid">
-          <article className="glass-panel about-card about-primary">
-            <span className="card-index">01</span>
-            <h3>Stavím prakticky</h3>
-            <p>Od prezentačního webu pro skutečnou klientku až po aplikaci pro řízení školní redakce. U každého projektu řeším nejen kód, ale i použitelnost.</p>
-          </article>
-          <article className="glass-panel about-card">
-            <span className="card-index">02</span>
-            <h3>Rostu s každým projektem</h3>
-            <p>Prohlubuji React a TypeScript, učím se Python a postupně mířím k vývoji aplikací využívajících AI.</p>
-          </article>
-          <article className="glass-panel about-card">
-            <span className="card-index">03</span>
-            <h3>Hledám první tým</h3>
-            <p>Rád se zapojím do práce nebo praxe, kde získám zpětnou vazbu, naučím se dobré postupy a přispěji reálnou prací.</p>
-          </article>
+        <div className="about-layout">
+          <figure className="portrait-card glass-panel">
+            <img src="/marek-manek.jpg" alt="Portrét Marka Maňka" loading="lazy" />
+            <div className="portrait-shade" />
+            <figcaption>
+              <span className="portrait-status"><i /> Hledám práci nebo praxi</span>
+              <strong>Marek Maněk</strong>
+              <small>Břeclav · aplikovaná informatika</small>
+            </figcaption>
+          </figure>
+          <div className="about-grid">
+            <article className="glass-panel about-card about-primary">
+              <span className="card-index">01</span>
+              <h3>Stavím prakticky</h3>
+              <p>Od prezentačního webu pro skutečnou klientku až po aplikaci pro řízení školní redakce. U každého projektu řeším nejen kód, ale i použitelnost.</p>
+            </article>
+            <article className="glass-panel about-card">
+              <span className="card-index">02</span>
+              <h3>Rostu s každým projektem</h3>
+              <p>Prohlubuji React a TypeScript, učím se Python a postupně mířím k vývoji aplikací využívajících AI.</p>
+            </article>
+            <article className="glass-panel about-card">
+              <span className="card-index">03</span>
+              <h3>Hledám první tým</h3>
+              <p>Rád se zapojím do práce nebo praxe, kde získám zpětnou vazbu, naučím se dobré postupy a přispěji reálnou prací.</p>
+            </article>
+          </div>
         </div>
       </section>
 
