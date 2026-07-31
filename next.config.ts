@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Sites' local worker does not provide the production image bindings.
+  // The portfolio images are already web-sized, so serve them directly.
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
