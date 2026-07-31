@@ -19,7 +19,14 @@ hosting="${SITES_PROJECT_ROOT}/dist/.openai/hosting.json"
   exit 66
 }
 
-node --input-type=module - "${worker}" "${hosting}" <<'NODE'
+node_worker="${worker}"
+node_hosting="${hosting}"
+if command -v cygpath >/dev/null; then
+  node_worker="$(cygpath -w "${worker}")"
+  node_hosting="$(cygpath -w "${hosting}")"
+fi
+
+node --input-type=module - "${node_worker}" "${node_hosting}" <<'NODE'
 import { readFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 
