@@ -63,7 +63,8 @@ const text = {
     seeWork: "Ukázat projekty",
     emailMe: "Napsat mi",
     workTitle: "Co jsem zatím postavil",
-    workLead: "Tři projekty, na kterých je nejlépe vidět, co už umím a co jsem se při jejich tvorbě naučil.",
+    workLead:
+      "Tři projekty, na kterých je nejlépe vidět, co už umím a co jsem se při jejich tvorbě naučil.",
     live: "Otevřít web",
     code: "Kód na GitHubu",
     aboutTitle: "Něco o mně",
@@ -77,9 +78,11 @@ const text = {
     learnItems: ["TypeScript", "Python", "základy AI aplikací"],
     currentLabel: "Právě rozpracované",
     currentTitle: "Menší e-shop",
-    currentText: "Na vlastním projektu si procházím celý nákupní proces — od práce s produkty po návrh rozhraní. Až bude v použitelném stavu, přidám ho sem.",
+    currentText:
+      "Na vlastním projektu si procházím celý nákupní proces — od práce s produkty po návrh rozhraní. Až bude v použitelném stavu, přidám ho sem.",
     contactTitle: "Hledám první příležitost",
-    contactText: "Pokud hledáte juniora na práci, praxi nebo menší projekt, napište mi. Rád pošlu další informace nebo se potkám na krátkém hovoru.",
+    contactText:
+      "Pokud hledáte juniora na práci, praxi nebo menší projekt, napište mi. Rád pošlu další informace nebo se potkám na krátkém hovoru.",
     footer: "Navrhl a naprogramoval Marek Maněk.",
     top: "nahoru",
   },
@@ -92,7 +95,8 @@ const text = {
     seeWork: "See my projects",
     emailMe: "Email me",
     workTitle: "Things I’ve built so far",
-    workLead: "Three projects that best show what I can do and what I learned while making them.",
+    workLead:
+      "Three projects that best show what I can do and what I learned while making them.",
     live: "Open website",
     code: "Code on GitHub",
     aboutTitle: "A bit about me",
@@ -106,9 +110,11 @@ const text = {
     learnItems: ["TypeScript", "Python", "AI application basics"],
     currentLabel: "Work in progress",
     currentTitle: "Small e-commerce project",
-    currentText: "I’m using a personal project to work through the complete shopping flow, from products to interface design. I’ll add it here once it is ready to use.",
+    currentText:
+      "I’m using a personal project to work through the complete shopping flow, from products to interface design. I’ll add it here once it is ready to use.",
     contactTitle: "I’m looking for my first opportunity",
-    contactText: "If you’re looking for a junior developer for a job, internship or smaller project, send me a message. I’ll be happy to share more or meet for a short call.",
+    contactText:
+      "If you’re looking for a junior developer for a job, internship or smaller project, send me a message. I’ll be happy to share more or meet for a short call.",
     footer: "Designed and built by Marek Maněk.",
     top: "back to top",
   },
@@ -125,27 +131,54 @@ export function PortfolioPage({ lang }: { lang: Lang }) {
   return (
     <main id="top" lang={lang}>
       <header className="site-header shell">
-        <a className="logo" href="#top">Marek Maněk</a>
+        <a className="logo" href="#top">
+          Marek Maněk
+        </a>
+
         <nav aria-label={en ? "Main navigation" : "Hlavní navigace"}>
           <a href="#projects">{t.nav[0]}</a>
           <a href="#about">{t.nav[1]}</a>
           <a href="#contact">{t.nav[2]}</a>
-          <a className="language" href={en ? "/" : "/en"}>{en ? "CZ" : "EN"}</a>
+          <a className="language" href={en ? "/" : "/en"}>
+            {en ? "CZ" : "EN"}
+          </a>
         </nav>
       </header>
 
       <section className="hero shell">
         <div className="hero-copy">
           <p className="kicker">{t.role}</p>
-          <h1><span>{t.intro}</span>{t.headline}</h1>
+
+          <h1>
+            <span>{t.intro}</span>
+            {t.headline}
+          </h1>
+
           <p className="lead">{t.lead}</p>
+
           <div className="actions">
-            <a className="button primary" href="#projects">{t.seeWork} <span>↓</span></a>
-            <a className="text-link" href="mailto:marek.manek.dj@seznam.cz">{t.emailMe} <Arrow /></a>
+            <a className="button primary" href="#projects">
+              {t.seeWork} <span>↓</span>
+            </a>
+
+            <a
+              className="text-link"
+              href="mailto:marek.manek.dj@seznam.cz"
+            >
+              {t.emailMe} <Arrow />
+            </a>
           </div>
         </div>
+
         <figure className="portrait">
-          <Image src="/marek-manek.jpg" alt="Marek Maněk" width={640} height={853} priority />
+          <Image
+            src="/marek-manek.jpg"
+            alt="Marek Maněk"
+            width={640}
+            height={853}
+            priority
+          />
+
           <figcaption>
             <span>03/2026</span>
             <span>Břeclav</span>
@@ -156,25 +189,62 @@ export function PortfolioPage({ lang }: { lang: Lang }) {
       <section className="section shell" id="projects">
         <div className="section-intro">
           <p className="section-number">01</p>
-          <div><h2>{t.workTitle}</h2><p>{t.workLead}</p></div>
+
+          <div>
+            <h2>{t.workTitle}</h2>
+            <p>{t.workLead}</p>
+          </div>
         </div>
+
         <div className="project-list">
           {projects.map((project, index) => (
             <article className="project" key={project.title.cs}>
               <div className={`project-preview preview-${index + 1}`}>
-                {project.image
-                  ? <Image src={project.image} alt={`${project.title[lang]} — ${en ? "website preview" : "náhled webu"}`} fill sizes="(max-width: 900px) 100vw, 58vw" />
-                  : <div className="egypt-preview"><span>Jessica Egypt</span><strong>Discover the<br />Red Sea</strong><small>Trips & experiences</small></div>}
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={`${project.title[lang]} — ${
+                      en ? "website preview" : "náhled webu"
+                    }`}
+                    fill
+                    sizes="(max-width: 900px) 100vw, 58vw"
+                  />
+                ) : (
+                  <div className="egypt-preview">
+                    <span>Jessica Egypt</span>
+                    <strong>
+                      Discover the
+                      <br />
+                      Red Sea
+                    </strong>
+                    <small>Trips &amp; experiences</small>
+                  </div>
+                )}
               </div>
+
               <div className="project-copy">
-                <p className="project-type">0{index + 1} / {project.type[lang]}</p>
+                <p className="project-type">
+                  0{index + 1} / {project.type[lang]}
+                </p>
+
                 <h3>{project.title[lang]}</h3>
                 <p>{project.description[lang]}</p>
                 <p className="project-note">{project.note[lang]}</p>
-                <ul>{project.stack.map((item) => <li key={item}>{item}</li>)}</ul>
+
+                <ul>
+                  {project.stack.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+
                 <div className="project-links">
-                  <a href={project.live} target="_blank" rel="noreferrer">{t.live} <Arrow /></a>
-                  <a href={project.repo} target="_blank" rel="noreferrer">{t.code} <Arrow /></a>
+                  <a href={project.live} target="_blank" rel="noreferrer">
+                    {t.live} <Arrow />
+                  </a>
+
+                  <a href={project.repo} target="_blank" rel="noreferrer">
+                    {t.code} <Arrow />
+                  </a>
                 </div>
               </div>
             </article>
@@ -185,28 +255,78 @@ export function PortfolioPage({ lang }: { lang: Lang }) {
       <section className="section about shell" id="about">
         <div className="section-intro">
           <p className="section-number">02</p>
-          <div><h2>{t.aboutTitle}</h2>{t.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+
+          <div>
+            <h2>{t.aboutTitle}</h2>
+
+            {t.about.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
         </div>
+
         <div className="skills">
-          <div><p>{t.use}</p><ul>{t.useItems.map((item) => <li key={item}>{item}</li>)}</ul></div>
-          <div><p>{t.learning}</p><ul>{t.learnItems.map((item) => <li key={item}>{item}</li>)}</ul></div>
+          <div>
+            <p>{t.use}</p>
+            <ul>
+              {t.useItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p>{t.learning}</p>
+            <ul>
+              {t.learnItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
+
         <div className="now">
           <p>{t.currentLabel}</p>
-          <div><h3>{t.currentTitle}</h3><p>{t.currentText}</p></div>
+
+          <div>
+            <h3>{t.currentTitle}</h3>
+            <p>{t.currentText}</p>
+          </div>
+
           <span aria-hidden="true">↘</span>
         </div>
       </section>
 
       <section className="contact shell" id="contact">
         <p className="section-number">03</p>
+
         <div>
           <h2>{t.contactTitle}</h2>
           <p>{t.contactText}</p>
-          <a className="email" href="mailto:marek.manek.dj@seznam.cz">marek.manek.dj@seznam.cz <Arrow /></a>
+
+          <a
+            className="email"
+            href="mailto:marek.manek.dj@seznam.cz"
+          >
+            marek.manek.dj@seznam.cz <Arrow />
+          </a>
+
           <div className="socials">
-            <a href="https://github.com/marekcze12" target="_blank" rel="noreferrer">GitHub <Arrow /></a>
-            <a href="https://www.linkedin.com/in/marek-man%C4%9Bk-5a9947339/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
+            <a
+              href="https://github.com/marekcze12"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub <Arrow />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/marek-man%C4%9Bk-5a9947339/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn <Arrow />
+            </a>
           </div>
         </div>
       </section>
