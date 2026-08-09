@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/og-image.webp" alt="Náhled osobního portfolia Marka Maňka" width="900">
+<img src="public/moje_portfolio.png" alt="Náhled osobního portfolia Marka Maňka" width="900">
 
 # Marek Maněk — osobní portfolio
 
