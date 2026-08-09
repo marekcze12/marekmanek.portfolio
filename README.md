@@ -1,35 +1,68 @@
-# Portfolio Marka Maňka
+<div align="center">
 
-Jednostránkové osobní portfolio začínajícího webového vývojáře a UX/UI designéra Marka Maňka. Projekt je postavený bez frontendového frameworku, s důrazem na rychlost, přístupnost, responzivitu a snadnou údržbu.
+<img src="public/og-image.webp" alt="Náhled osobního portfolia Marka Maňka" width="900">
 
-## Hlavní funkce
+# Marek Maněk — osobní portfolio
 
-- responzivní dark-mode design od 320 px,
-- přístupná desktopová a mobilní navigace,
-- dynamicky generované projektové karty,
-- modulární JavaScript,
-- animace respektující `prefers-reduced-motion`,
-- klientská validace v češtině,
-- formulář připravený pro Netlify Forms,
-- SEO, Open Graph a JSON-LD metadata,
-- optimalizované WebP náhledy projektů.
+**Moderní jednostránkové portfolio webového vývojáře a UX/UI designéra.**  
+Od prvního návrhu přes responzivní frontend až po nasazení na Netlify.
 
-## Technologie
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript_ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111)](https://developer.mozilla.org/docs/Web/JavaScript)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
+[![Netlify](https://img.shields.io/badge/Netlify_ready-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://www.netlify.com/)
 
-HTML5, Tailwind CSS, vlastní CSS, Vanilla JavaScript ES6+, Vite, Node.js, npm a Netlify Forms.
+[Repozitář](https://github.com/marekcze12/marekmanek.portfolio) · [Nahlásit problém](https://github.com/marekcze12/marekmanek.portfolio/issues) · [Kontakt](mailto:marek.manek.web@gmail.com)
 
-## Lokální spuštění
+</div>
 
-Požadován je Node.js 20.19+ nebo 22.12+ a npm.
+## O projektu
+
+Portfolio představuje moji práci, technologie a služby v oblasti webdesignu, UX/UI a frontendového vývoje. Vzniklo jako lehký web bez frontendového frameworku, abych měl plnou kontrolu nad strukturou, styly, přístupností i výkonem.
+
+Design staví na tmavém vizuálním stylu, fialové paletě a vlastním technologickém motivu **MM**. Obsah je zaměřený na živnostníky, malé firmy a jednotlivce, kteří potřebují moderní webovou prezentaci.
+
+## Co portfolio obsahuje
+
+- responzivní rozložení od malých mobilů po široké monitory,
+- přístupnou navigaci včetně mobilního menu a ovládání klávesnicí,
+- sekce O mně, Služby, Dovednosti, Projekty a Pracovní proces,
+- projektové karty generované z jednoho datového souboru,
+- kontaktní formulář připravený pro Netlify Forms,
+- vlastní českou validaci formuláře a přístupná stavová oznámení,
+- jemné animace respektující `prefers-reduced-motion`,
+- SEO metadata, Open Graph, Twitter Card a JSON-LD,
+- optimalizované náhledy ve formátu WebP,
+- bezpečnostní hlavičky nastavené pro Netlify.
+
+## Použité technologie
+
+| Oblast | Technologie |
+| --- | --- |
+| Struktura | HTML5, sémantické HTML |
+| Vzhled | Tailwind CSS, vlastní CSS, mobile-first přístup |
+| Interakce | Vanilla JavaScript ES6+, modulární JS |
+| Vývoj | Node.js, npm, Vite |
+| Verzování | Git, GitHub |
+| Hosting | Netlify, Netlify Forms |
+
+## Spuštění na počítači
+
+Budete potřebovat [Node.js](https://nodejs.org/) ve verzi **20.19+** nebo **22.12+** a npm.
 
 ```bash
-git clone URL_REPOZITARE
-cd portfolio
+git clone https://github.com/marekcze12/marekmanek.portfolio.git
+cd marekmanek.portfolio
 npm install
 npm run dev
 ```
 
-Vite vypíše lokální adresu, obvykle `http://localhost:5173`.
+Vite zobrazí lokální adresu, obvykle:
+
+```text
+http://localhost:5173
+```
 
 ## Produkční build
 
@@ -37,37 +70,84 @@ Vite vypíše lokální adresu, obvykle `http://localhost:5173`.
 npm run build
 ```
 
-Výstup vznikne ve složce `dist/`. Lokální kontrolu buildu spustíte pomocí `npm run preview`.
+Hotová produkční verze vznikne ve složce `dist/`. Zkontrolovat ji můžete příkazem:
+
+```bash
+npm run preview
+```
+
+## Struktura projektu
+
+```text
+marekmanek.portfolio/
+├── public/
+│   ├── images/projects/       # náhledy jednotlivých projektů
+│   ├── favicon.svg
+│   └── og-image.webp
+├── src/
+│   ├── data/projects.js       # obsah projektových karet
+│   ├── modules/
+│   │   ├── animations.js
+│   │   ├── contact-form.js
+│   │   └── navigation.js
+│   ├── main.js
+│   └── style.css
+├── index.html
+├── netlify.toml
+├── package.json
+├── postcss.config.js
+└── tailwind.config.js
+```
+
+## Úprava obsahu
+
+| Co chcete změnit | Soubor |
+| --- | --- |
+| Osobní texty, služby a kontakt | `index.html` |
+| Projekty, technologie a odkazy | `src/data/projects.js` |
+| Barvy, komponenty a responzivita | `src/style.css` |
+| Tailwind konfigurace | `tailwind.config.js` |
+| Náhledy projektů | `public/images/projects/` |
+| Navigace a mobilní menu | `src/modules/navigation.js` |
+| Validace formuláře | `src/modules/contact-form.js` |
+
+Projektové náhledy používají názvy:
+
+```text
+jessica-egypt.webp
+krypto-dashboard.webp
+vspj-editorial-system.webp
+```
+
+Doporučený rozměr obrázků je **1200 × 750 px**.
+
+## Kontaktní formulář
+
+Formulář využívá Netlify Forms a nevyžaduje vlastní backend. Obsahuje skryté pole `form-name`, honeypot ochranu `bot-field`, klientskou validaci a blokování opakovaného odeslání během zpracování.
+
+Na lokálním vývojovém serveru se zprávy do Netlify neukládají. Formulář začne plně fungovat po nasazení projektu na Netlify.
 
 ## Nasazení na Netlify
 
-1. Nahrajte repozitář na GitHub.
-2. V Netlify zvolte **Add new site → Import an existing project** a propojte GitHub.
-3. Build command ponechte `npm run build` a publish directory `dist` (hodnoty jsou také v `netlify.toml`).
-4. Po prvním nasazení Netlify automaticky rozpozná formulář `contact`.
-5. V nastavení Forms lze zapnout e-mailová upozornění na nové zprávy.
+1. V Netlify vyberte **Add new site → Import an existing project**.
+2. Propojte GitHub a zvolte repozitář `marekcze12/marekmanek.portfolio`.
+3. Použijte build command `npm run build`.
+4. Jako publish directory nastavte `dist`.
+5. Spusťte nasazení.
 
-Formulář používá atribut `data-netlify="true"`, skryté pole `form-name` a honeypot `bot-field`. Na lokálním Vite serveru se zprávy do Netlify neukládají; plně funguje až na nasazené doméně Netlify.
+Tyto hodnoty jsou připravené také v souboru `netlify.toml`. Po prvním nasazení nahraďte v `index.html` adresu `https://www.vase-domena.cz/` skutečnou URL portfolia.
 
-## Kde co upravit
+## Kontakt
 
-- osobní texty, služby, kontakty a metadata: `index.html`,
-- seznam a údaje projektů: `src/data/projects.js`,
-- projektové screenshoty: `public/images/projects/`,
-- barvy a vizuální styl: `src/style.css` a `tailwind.config.js`,
-- navigace, animace a formulář: `src/modules/`,
-- canonical URL a Open Graph URL: horní část `index.html` (nahraďte `https://www.vase-domena.cz/`).
+- **E-mail:** [marek.manek.web@gmail.com](mailto:marek.manek.web@gmail.com)
+- **GitHub:** [@marekcze12](https://github.com/marekcze12)
+- **LinkedIn:** [Marek Maněk](https://www.linkedin.com/in/marek-man%C4%9Bk-5a9947339/)
+- **Lokalita:** Břeclav, Česká republika
 
-Screenshoty nahrazujte při zachování názvů `jessica-egypt.webp`, `krypto-dashboard.webp` a `vspj-editorial-system.webp`. Doporučený rozměr je 1200 × 750 px.
+---
 
-## Struktura
+<div align="center">
 
-```text
-public/               statické soubory a obrázky
-src/data/             upravitelná data projektů
-src/modules/          samostatné JS moduly
-src/main.js           vstupní bod aplikace
-src/style.css         Tailwind vrstvy a vlastní styly
-index.html            obsah a struktura stránky
-netlify.toml          build a bezpečnostní hlavičky
-```
+Navrženo a vytvořeno Markem Maňkem.
+
+</div>
