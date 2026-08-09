@@ -21,7 +21,7 @@ Od prvního návrhu přes responzivní frontend až po nasazení na Netlify.
 
 Portfolio představuje moji práci, technologie a služby v oblasti webdesignu, UX/UI a frontendového vývoje. Vzniklo jako lehký web bez frontendového frameworku, abych měl plnou kontrolu nad strukturou, styly, přístupností i výkonem.
 
-Design staví na tmavém vizuálním stylu, fialové paletě a vlastním technologickém motivu **MM**. Obsah je zaměřený na živnostníky, malé firmy a jednotlivce, kteří potřebují moderní webovou prezentaci.
+Design staví na tmavém vizuálním stylu, fialové paletě a vlastním technologickém motivu **MM**. Obsah je zaměřený na živnostníky, malé firmy a jednotlivce, kteří potřebují moderní webové stránky.
 
 ## Co portfolio obsahuje
 
