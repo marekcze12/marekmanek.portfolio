@@ -3,6 +3,7 @@ import { projects } from './data/projects.js';
 import { initNavigation } from './modules/navigation.js';
 import { initAnimations } from './modules/animations.js';
 import { initContactForm } from './modules/contact-form.js';
+import { initTypewriter } from './modules/typewriter.js';
 
 function renderProjects() {
   const grid = document.querySelector('[data-projects-grid]');
@@ -31,6 +32,7 @@ document.documentElement.classList.add('js');
 renderProjects();
 initNavigation();
 initContactForm();
+initTypewriter();
 requestAnimationFrame(initAnimations);
 const year = document.querySelector('[data-current-year]');
 if (year) year.textContent = new Date().getFullYear();
