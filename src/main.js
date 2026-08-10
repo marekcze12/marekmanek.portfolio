@@ -1,4 +1,6 @@
-import './style.css';
+import "@fontsource-variable/inter/wght.css";
+import "@fontsource-variable/space-grotesk/wght.css";
+import "./style.css";
 import { projects } from './data/projects.js';
 import { initNavigation } from './modules/navigation.js';
 import { initAnimations } from './modules/animations.js';

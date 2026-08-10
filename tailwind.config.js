@@ -14,8 +14,8 @@ export default {
         lilac: '#A855F7'
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        display: ['"Space Grotesk"', ...defaultTheme.fontFamily.sans]
+        sans: ['"Inter Variable"', "Inter", "sans-serif"],
+        display: ['"Space Grotesk Variable"', "Space Grotesk", "sans-serif"],
       },
       boxShadow: {
         glow: '0 18px 60px rgba(103, 35, 181, .22)'

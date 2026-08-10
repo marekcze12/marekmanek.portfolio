@@ -6,7 +6,7 @@
 :root { color-scheme: dark; --bg:#0B0712; --bg-alt:#100B18; --panel:#15101F; --card:#1D1629; --raised:#251A35; --brand:#6723B5; --purple:#8B45D6; --accent:#A855F7; --light:#C084FC; --text:#F5F3FF; --muted:#B8AEC9; --dim:#91859F; --border:rgba(192,132,252,.18); --radius:1.25rem; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; scroll-padding-top:6rem; }
-body { margin:0; min-width:320px; overflow-x:hidden; background:var(--bg); color:var(--text); font-family:Inter,system-ui,sans-serif; line-height:1.65; }
+body { margin:0; min-width:320px; overflow-x:hidden; background:var(--bg); color:var(--text); font-family: "Inter Variable", Inter, sans-serif; line-height:1.65; }
 body.menu-open {
   overflow: hidden;
 }
