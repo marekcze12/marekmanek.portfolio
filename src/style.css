@@ -133,6 +133,448 @@ button,input,textarea { font:inherit; }
   display: inline-block;
 }
 
+/* Case study: Jessica Egypt */
+
+.case-page {
+  --case-gold: #edae36;
+  --case-brown: #251007;
+  --case-cream: #fffaf2;
+}
+
+.case-header .nav-wrap {
+  min-height: 4.75rem;
+}
+
+.case-navigation {
+  gap: 1rem;
+}
+
+.case-back-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  color: var(--muted);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.case-back-link:hover {
+  border-color: rgba(192, 132, 252, 0.45);
+  background: rgba(168, 85, 247, 0.08);
+  color: var(--text);
+}
+
+.case-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(8.5rem, 14vw, 11rem) 0
+    clamp(4.5rem, 8vw, 7rem);
+  isolation: isolate;
+}
+
+.case-hero::before {
+  position: absolute;
+  z-index: -1;
+  top: -12rem;
+  right: -10rem;
+  width: 38rem;
+  height: 38rem;
+  border-radius: 50%;
+  background: rgba(103, 35, 181, 0.22);
+  content: "";
+  filter: blur(100px);
+}
+
+.case-hero-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.case-hero h1 {
+  max-width: 12ch;
+  margin: 0.75rem 0 1.25rem;
+  font:
+    700 clamp(3rem, 10vw, 6.5rem) / 0.95
+    "Space Grotesk Variable",
+    "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.065em;
+}
+
+.case-lead {
+  max-width: 46rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.75rem;
+}
+
+.case-tags span {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.06);
+  color: #ddd4e8;
+  font-size: 0.84rem;
+}
+
+.case-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.case-summary {
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(37, 26, 53, 0.88),
+      rgba(21, 16, 31, 0.8)
+    );
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.case-summary dl {
+  margin: 0;
+}
+
+.case-summary dl div {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.case-summary dl div:first-child {
+  padding-top: 0;
+}
+
+.case-summary dl div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.case-summary dt {
+  color: var(--dim);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.case-summary dd {
+  margin: 0.25rem 0 0;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.case-browser {
+  overflow: hidden;
+  margin-top: clamp(3rem, 7vw, 5.5rem);
+  border: 1px solid rgba(192, 132, 252, 0.25);
+  border-radius: clamp(1rem, 3vw, 1.5rem);
+  background: #0d0914;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.5),
+    0 0 70px rgba(103, 35, 181, 0.15);
+}
+
+.case-browser img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.case-section {
+  position: relative;
+  padding: clamp(4.75rem, 9vw, 8rem) 0;
+}
+
+.case-content-grid {
+  display: grid;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.case-copy {
+  max-width: 44rem;
+}
+
+.case-copy h2,
+.case-heading h2,
+.case-next h2,
+.case-cta h2 {
+  margin: 0.65rem 0 1.25rem;
+  font:
+    700 clamp(2rem, 5vw, 3.5rem) / 1.06
+    "Space Grotesk Variable",
+    "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.case-copy p,
+.case-heading > p:last-child,
+.case-next p,
+.case-cta p {
+  color: var(--muted);
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+}
+
+.case-copy p:last-of-type {
+  margin-bottom: 0;
+}
+
+.case-text-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  color: var(--light);
+  font-weight: 700;
+  text-underline-offset: 0.3rem;
+}
+
+.case-heading {
+  max-width: 50rem;
+  margin-bottom: clamp(2.25rem, 5vw, 4rem);
+}
+
+.case-palette {
+  display: grid;
+  gap: 1rem;
+}
+
+.case-palette > div {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--card);
+}
+
+.case-palette span {
+  display: block;
+  width: 100%;
+  min-height: 7rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.75rem;
+  background: var(--swatch);
+}
+
+.case-palette strong,
+.case-palette small {
+  display: block;
+}
+
+.case-palette small {
+  margin-top: 0.2rem;
+  color: var(--dim);
+}
+
+.case-features {
+  display: grid;
+  gap: 1rem;
+}
+
+.case-features article {
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(29, 22, 41, 0.95),
+      rgba(19, 14, 28, 0.95)
+    );
+}
+
+.case-features article > strong {
+  color: var(--light);
+  font:
+    700 0.8rem "Space Grotesk Variable",
+    "Space Grotesk",
+    sans-serif;
+  letter-spacing: 0.13em;
+}
+
+.case-features h3 {
+  margin: 1rem 0 0.6rem;
+  font:
+    700 1.3rem "Space Grotesk Variable",
+    "Space Grotesk",
+    sans-serif;
+}
+
+.case-features p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.case-shot {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: clamp(1rem, 3vw, 1.5rem);
+  background: var(--card);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.case-shot img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
+.case-shot figcaption {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--dim);
+  font-size: 0.9rem;
+}
+
+.case-mobile-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+.case-phone {
+  width: min(100%, 24rem);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  background: var(--card);
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.45),
+    0 0 60px rgba(103, 35, 181, 0.16);
+}
+
+.case-phone img {
+  width: 100%;
+}
+
+.case-next {
+  max-width: 53rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(103, 35, 181, 0.2),
+      rgba(29, 22, 41, 0.85)
+    );
+}
+
+.case-cta-section {
+  padding: 0 0 clamp(5rem, 9vw, 8rem);
+}
+
+.case-cta {
+  padding: clamp(1.75rem, 6vw, 4rem);
+  border: 1px solid rgba(192, 132, 252, 0.28);
+  border-radius: clamp(1.25rem, 4vw, 2rem);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(168, 85, 247, 0.2),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(37, 26, 53, 0.9),
+      rgba(21, 16, 31, 0.96)
+    );
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.32);
+}
+
+.case-cta p {
+  max-width: 45rem;
+}
+
+.project-links {
+  flex-wrap: wrap;
+}
+
+@media (min-width: 40rem) {
+  .case-palette {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .case-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 48rem) {
+  .case-content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-palette {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .case-features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .case-mobile-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.65fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .case-hero-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(19rem, 0.65fr);
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .case-navigation .brand > span:last-child {
+    display: none;
+  }
+
+  .case-back-link {
+    font-size: 0.88rem;
+  }
+
+  .case-actions {
+    flex-direction: column;
+  }
+
+  .case-actions .button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-back-link {
+    transition: none;
+  }
+}
+
 @keyframes cursor-blink {
   0%,
   48% {
@@ -213,3 +655,95 @@ button,input,textarea { font:inherit; }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; scroll-behavior:auto!important; }.js [data-reveal] { opacity:1; transform:none; } .typing-cursor {
     display: none !important;
   } }
+
+/* Obousměrné přechody mezi stránkami */
+
+html {
+  overflow-x: hidden;
+  background: #0b0712;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html.is-page-leaving-forward body {
+    pointer-events: none;
+    animation:
+      page-leave-forward 420ms
+      cubic-bezier(0.64, 0, 0.78, 0) both;
+  }
+
+  html.is-page-entering-forward body {
+    animation:
+      page-enter-forward 520ms
+      cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  html.is-page-leaving-back body {
+    pointer-events: none;
+    animation:
+      page-leave-back 420ms
+      cubic-bezier(0.64, 0, 0.78, 0) both;
+  }
+
+  html.is-page-entering-back body {
+    animation:
+      page-enter-back 520ms
+      cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes page-leave-forward {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(100vw, 0, 0);
+    opacity: 0.8;
+  }
+}
+
+@keyframes page-enter-forward {
+  from {
+    transform: translate3d(-100vw, 0, 0);
+    opacity: 0.8;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes page-leave-back {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(-100vw, 0, 0);
+    opacity: 0.8;
+  }
+}
+
+@keyframes page-enter-back {
+  from {
+    transform: translate3d(100vw, 0, 0);
+    opacity: 0.8;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.is-page-leaving-forward body,
+  html.is-page-entering-forward body,
+  html.is-page-leaving-back body,
+  html.is-page-entering-back body {
+    animation: none;
+  }
+}

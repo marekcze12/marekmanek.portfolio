@@ -1,40 +1,112 @@
 import "@fontsource-variable/inter/wght.css";
 import "@fontsource-variable/space-grotesk/wght.css";
 import "./style.css";
-import { projects } from './data/projects.js';
-import { initNavigation } from './modules/navigation.js';
-import { initAnimations } from './modules/animations.js';
-import { initContactForm } from './modules/contact-form.js';
-import { initTypewriter } from './modules/typewriter.js';
+
+import { projects } from "./data/projects.js";
+import { initNavigation } from "./modules/navigation.js";
+import { initAnimations } from "./modules/animations.js";
+import { initContactForm } from "./modules/contact-form.js";
+import { initTypewriter } from "./modules/typewriter.js";
+import { initPageTransition } from "./modules/page-transition.js";
 
 function renderProjects() {
-  const grid = document.querySelector('[data-projects-grid]');
+  const grid = document.querySelector("[data-projects-grid]");
+
   if (!grid) return;
-  grid.innerHTML = projects.map((project) => `
-    <article class="project-card" data-reveal>
-      <div class="browser-frame">
-        <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>${new URL(project.liveUrl).hostname}</span></div>
-        <img src="${project.image}" alt="${project.imageAlt}" width="1200" height="750" loading="lazy">
-      </div>
-      <div class="project-content">
-        <p class="eyebrow">${project.category}</p>
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-        <div class="tag-list" aria-label="Použité technologie">${project.technologies.map((tech) => `<span>${tech}</span>`).join('')}</div>
-        <div class="project-role"><strong>Moje role</strong><p>${project.role}</p></div>
-        <div class="project-links">
-          <a class="button button-primary" href="${project.liveUrl}" target="_blank" rel="noopener noreferrer">Zobrazit web <span aria-hidden="true">↗</span></a>
-          <a class="button button-secondary" href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">Zdrojový kód <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </article>`).join('');
+
+  grid.innerHTML = projects
+    .map(
+      (project) => `
+        <article class="project-card" data-reveal>
+          <div class="browser-frame">
+            <div class="browser-bar" aria-hidden="true">
+              <i></i>
+              <i></i>
+              <i></i>
+              <span>${new URL(project.liveUrl).hostname}</span>
+            </div>
+
+            <img
+              src="${project.image}"
+              alt="${project.imageAlt}"
+              width="1200"
+              height="750"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="project-content">
+            <p class="eyebrow">${project.category}</p>
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+
+            <div class="tag-list" aria-label="Použité technologie">
+              ${project.technologies
+                .map((technology) => `<span>${technology}</span>`)
+                .join("")}
+            </div>
+
+            <div class="project-role">
+              <strong>Moje role</strong>
+              <p>${project.role}</p>
+            </div>
+
+            <div class="project-links">
+              ${
+                project.caseStudyUrl
+                  ? `
+                    <a
+                      class="button button-primary"
+                      href="${project.caseStudyUrl}"
+                      aria-label="Zobrazit případovou studii projektu ${project.title}"
+                      data-page-transition="forward"
+                    >
+                      Detail projektu
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  `
+                  : ""
+              }
+
+              <a
+                class="button button-secondary"
+                href="${project.liveUrl}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Zobrazit web
+                <span aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                class="button button-secondary"
+                href="${project.githubUrl}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Zdrojový kód
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      `
+    )
+    .join("");
 }
 
-document.documentElement.classList.add('js');
+document.documentElement.classList.add("js");
+
 renderProjects();
 initNavigation();
 initContactForm();
 initTypewriter();
+initPageTransition();
+
 requestAnimationFrame(initAnimations);
-const year = document.querySelector('[data-current-year]');
-if (year) year.textContent = new Date().getFullYear();
+
+const year = document.querySelector("[data-current-year]");
+
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
