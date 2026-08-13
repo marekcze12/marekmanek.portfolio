@@ -13,6 +13,7 @@ export const projects = [
     liveUrl: "https://jessicaegypt.netlify.app",
     githubUrl: "https://github.com/marekcze12/projekt_jessica",
   },
+
   {
     title: "Krypto Dashboard",
     category: "Webová aplikace / práce s API",
@@ -30,6 +31,7 @@ export const projects = [
     liveUrl: "https://manek-krypto.netlify.app",
     githubUrl: "https://github.com/marekcze12/Krypto-Dashboard",
   },
+
   {
     title: "VŠPJ Editorial System",
     category: "Školní týmový projekt / redakční systém",
@@ -50,5 +52,27 @@ export const projects = [
       "Náhled týmového projektu VŠPJ Editorial System v okně prohlížeče",
     liveUrl: "https://skolni-casopis.netlify.app",
     githubUrl: "https://github.com/zemano60/Nam_staci_Ecko",
+  },
+
+  {
+    title: "AveGelato Lednice",
+    category: "Prezentační web / gastro",
+    description:
+      "Moderní responzivní webová prezentace pro AveGelato v Lednici. Web představuje značku, její příběh, nabídku gelata, galerii a praktické informace pro návštěvníky včetně mapy a navigace.",
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript ES6+",
+      "Google Maps",
+      "Git",
+      "GitHub",
+    ],
+    role:
+      "Samostatný návrh a realizace celého webu od vizuálního konceptu přes frontendový vývoj až po responzivní zpracování, jazykovou mutaci CZ / EN a přípravu projektu k nasazení.",
+    image: "/images/projects/avegelato-lednice.webp",
+    imageAlt:
+      "Náhled prezentačního webu AveGelato Lednice v okně prohlížeče",
+    liveUrl: "https://avegelato.netlify.app/",
+    githubUrl: "https://github.com/marekcze12/AveGelato",
   },
 ];
